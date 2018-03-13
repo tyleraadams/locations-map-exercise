@@ -4,16 +4,16 @@ This exercise requires you to display 25 random BentoBox locations on a map in R
 
 Use whatever other tools you think are best to accomplish the requirements below (for example, local component state using `setState()`, Redux, MobX, etc).
 
-We're primarily interested in seeing how you structure and implement a small JavaScript project so there is no requirement to spend a lot of time on styling (though it should be presentable). However, if CSS is your strength, feel free to make it beautiful! We estimate this should take somewhere between 2-3 hours to complete.
+We're primarily interested in seeing how you structure and implement a small JavaScript project so there is no requirement to spend a lot of time on styling (though it should be presentable). However, if CSS is your strength, feel free to make it beautiful! We estimate this exercise take somewhere between 2-3 hours to complete.
 
 # Instructions
 
 1.  Fork this repository.
 2.  Install dependencies with `npm install` or `yarn`.
 3.  Run `npm start` or `yarn start`. This should start a webpack dev server, and the app should be accessible at `http://localhost:8080/`
-4.  When you're done, please open a pull request and send us an email letting us know you're dong.
+4.  When you're done, please open a pull request and send us an email letting us know you're done.
 
-If you have any problems getting the app started or dependencies installed, please let us know.
+If you have any problems getting the app started or installing the dependencies, please let us know.
 
 # Location Data
 
@@ -21,11 +21,13 @@ If you have any problems getting the app started or dependencies installed, plea
 
 # Requirements
 
-1.  Based on the response from `fetchLocations()`, place corresponding pins on a map (use whatever mapping library you choose).
+1.  When `fetchLocations()` is called, display an indication to the user that the locations are loading (this could be a loader or a simple message).
 
-2.  Add tooltips that open when clicking a pin. The tooltip should contain the name and address of the location.
+2.  Based on the response from `fetchLocations()`, place corresponding pins on a map (use whatever mapping library you choose).
 
-3.  When a user clicks on a tooltip, this should also display all the location data (e.g., name, address, an image, and hours (if present in response), etc.) somewhere else on the page.
+3.  Add tooltips that open when clicking a pin. The tooltip should contain the name and address of the location.
+
+4.  When a user clicks on a tooltip, this should also display all the location data (e.g., name, address, an image, and hours (if present in response), etc.) somewhere else on the page. For example, you could have the map on one side of the screen and "active" loation details on the other.
 
 # Optional
 
