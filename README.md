@@ -4,7 +4,7 @@ This exercise requires you to display 25 random BentoBox locations on a map in R
 
 Use whatever other tools you think are best to accomplish the requirements below (for example, local component state using `setState()`, Redux, MobX, etc).
 
-We're primarily interested in seeing how you structure and implement a small JavaScript project so there is no requirement to spend a lot of time on styling (though it should be presentable). However, if CSS is your strength, feel free to make it beautiful! We estimate this exercise take somewhere between 2-3 hours to complete. Please attempt to write modular, reusable code, where possible.
+We're primarily interested in seeing how you structure and implement a small JavaScript project so there is no requirement to spend a lot of time on styling (though it should be presentable). However, if CSS is your strength, feel free to make it beautiful! We estimate this exercise will take somewhere between 2-3 hours to complete. Please attempt to write modular, reusable code, where possible.
 
 # Instructions
 
@@ -27,9 +27,9 @@ If you have any problems getting the app started or installing the dependencies,
 
 3.  Add tooltips that open when clicking a pin. The tooltip should contain the name and address of the location, as well as a button to "view details.""
 
-4.  When a user clicks on "view details", this should also display all the location data (e.g., name, address, an image, and hours (if present in response), etc.) somewhere else on the page. For example, you could have the map on one side of the screen and "active" location details on the other, or you could display the details in a modal.
+4.  When a user clicks on "view details", this should display all the location data (e.g., name, address, an image, and hours (if present in response), etc.) somewhere else on the page. For example, you could have the map on one side of the screen and the selected location details on the other, or you could display the details in a modal.
 
 # Optional
 
 1.  If more than one image is returned by the API for a given location, display an image slider.
-2.  Implement some type of undo/redo functionality to cycle through the previously selected locations.
+2.  Implement undo/redo functionality to cycle through the previously selected locations.
