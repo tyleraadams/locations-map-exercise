@@ -1,7 +1,7 @@
 const jsonp = require('jsonp-promise');
 
-const LOCATIONS_ENDPOINT = 'https://getbento.com/api/locations_excercise';
+const LOCATIONS_ENDPOINT = 'https://getbento.com/api/locations_excercise/';
 
-export function fetchCart() {
+export function fetchLocations() {
   return jsonp(LOCATIONS_ENDPOINT).promise;
 }
