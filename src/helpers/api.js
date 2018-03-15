@@ -1,7 +1,13 @@
-const jsonp = require('jsonp-promise');
+import { LOCATIONS } from './constants';
 
-const LOCATIONS_ENDPOINT = 'https://getbento.com/api/locations_excercise/';
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
 export function fetchLocations() {
-  return jsonp(LOCATIONS_ENDPOINT).promise;
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      resolve(LOCATIONS);
+    }, getRandomInt(1250));
+  });
 }
