@@ -1,3 +1,26 @@
+# YUMMY RESTOS
+
+Thank you for checking this out.
+
+Before you get started, get an API key from google for maps (https://console.developers.google.com/apis/) and throw it in a `.credentials.json` file inside the `src` dir. You can use the `.example` file that's already checked in there as an example. You'll need to enable `Google Maps JavaScript API` and `Google Maps Geocoding API` for your key.
+
+To get started, run `npm i` and `npm start` to start development mode.
+
+I added eslint to webpack lint js.
+
+For styles, I am using scss. I import all scss files from styles directory and components directory inside index.scss. If you have stylelint installed globally `npm i -g stylelint` you can run `styelint src/**/*.scss`. Settings are in .stylelintrc. If I had more time I would hook that up in webpack to automate.
+
+For state, I chose to use component state. All application state lives on the App component, which then passes relevant props to its children. This is fine for a small project, but doesn't scale well. For a bigger project, I would tend to use Redux.
+
+For the api, you'll notice the loading state is VERY slow. I explained in a comment inline in the code, but because of restrictions with Google Maps, I have to a) pass lat/lng data to markers to place them on the map, which means that b) I have to query GM's geocoding service, which rate limits aggressively-- I have to stagger those calls unfortunately-- and c) I have to wait for the google maps script to load before I begin to make those calls. This is not how I would build this for production (I would store lat lng data in the db.)
+
+I chose to use react-google-maps library as a flexible React wrapper for google maps. It's a pretty cool project.
+
+For the slider, I am using nuka-carousel. I won't use it again because of some bugs I found during this project (you'll see a comment I left about setting carousel dimensions), but it works well enough here.
+
+Please reach out if you have any further questions for me. (I apologize in advance for making this one giant commit, I normally would it split up for the reviewer's benefit.) You can reach me at tyleraadams@gmail.com. Thanks again for reviewing, and I am looking forward to your feedback.
+
+# ===ORIGNAL README===
 # BentoBox Locations Map Excercise
 
 This exercise requires you to display 25 random BentoBox locations on a map in React.

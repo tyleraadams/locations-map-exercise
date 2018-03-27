@@ -1,0 +1,40 @@
+/*
+  Global styles and resets go here
+*/
+
+body {
+  overflow: hidden;
+  font-family: $secondaryType;
+  color: $secondaryTypeColor;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+nav {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $primaryType;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  color: $linkColor;
+}

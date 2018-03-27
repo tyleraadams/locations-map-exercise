@@ -1,0 +1,61 @@
+/*!
+ * Adapted this from:
+ * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Licensed under MIT
+ */
+.la-ball-scale-pulse,
+.la-ball-scale-pulse > div {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.la-ball-scale-pulse {
+    display: block;
+    font-size: 0;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+
+  & > div {
+    display: inline-block;
+    float: none;
+    background-color: currentColor;
+    border: 0 solid currentColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    opacity: .5;
+    animation: ball-scale-pulse 2s infinite ease-in-out;
+
+    &:last-child {
+      animation-delay: -1.0s;
+    }
+  }
+
+  &.la-2x {
+    width: 64px;
+    height: 64px;
+
+    &> div {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+/*
+ * Animation
+ */
+@keyframes ball-scale-pulse {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
