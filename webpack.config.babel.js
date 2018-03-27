@@ -30,6 +30,7 @@ const productionPlugin = new webpack.DefinePlugin({
 
 const base = {
   entry: './src/index.js',
+
   output: {
     filename: 'checkout-exercise.js',
     path: PATHS.dist,
@@ -37,14 +38,17 @@ const base = {
   },
   module: {
     rules: [
-      {
-        test: /\.js?$/,
+       {
+        test: /\.js$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'babel-loader'
-          }
+          "babel-loader",
+          "eslint-loader",
         ]
+      },
+      {
+        test:/\.(s*)css$/,
+        use:['style-loader','css-loader', 'sass-loader']
       }
     ]
   },

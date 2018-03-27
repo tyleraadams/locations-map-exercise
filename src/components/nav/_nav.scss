@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  background: $navBg;
+  color: $primaryTypeColor;
+
+  h1 {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+  }
+}

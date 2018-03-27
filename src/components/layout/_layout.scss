@@ -1,0 +1,24 @@
+.layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: $navHeight auto;
+
+  &__top {
+    grid-column: span 12;
+    grid-row: 1;
+  }
+
+  &__left {
+    grid-column: span 4;
+    grid-row: 2;
+    background: $infoBg;
+  }
+
+  &__right {
+    grid-column: 5 / span 8;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
